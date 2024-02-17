@@ -8,13 +8,13 @@ import playsound
 
 def change(text="type",src="English",dest="Hindi"):
 	text1=text 
-	src1=src
-	dest1=dest
-	trans=Translator()
+	src1=src 
+	dest1=dest  
+	trans=Translator() 
 	trans1=trans.translate(text,src=src1,dest=dest1)
 	return trans1.text
-
-def data():
+ 
+def data(): 
 	s = comb_sor.get()
 	d = comb_dest.get()
 	masg = Sor_txt.get(1.0,END)
@@ -60,7 +60,7 @@ def mike2():
 
 
 root = Tk()
-root.title("NL_Translator")
+root.title("NL_Translator") 
 root.geometry("500x700")
 root.config(bg='#00b3b3')
 
@@ -91,7 +91,7 @@ button_change = Button(frame,text="Translate",relief=RAISED, command=data)
 button_change.place(x=170,y=300,height=40,width=150)
 
 comb_dest = ttk.Combobox(frame,value=list_txt)
-comb_dest.place(x=330,y=300,height=40,width=150)
+comb_dest.place(x=330,y=300,height=40,width=150) 
 comb_dest.set("Hindi")
 
 
@@ -99,12 +99,14 @@ comb_dest.set("Hindi")
 lab_txt=Label(root,text="Translated Text",font=("Time New Roman", 20,"bold"),fg='Black',bg='#00b3b3')
 lab_txt.place(x=100,y=360,height=30,width=300)
 
-dest_txt = Text(frame,font=("Time New Roman", 20,"bold"),wrap=WORD)
+dest_txt = Text(frame,font=("Time New Roman", 20,"bold"),wrap=WORD) 
 dest_txt.place(x=10,y=400,height=150,width=480)
 
-#Speaker button
+
+#Speaker button 
 photo2=PhotoImage(file="speaker1.png")
 button_change = Button(frame,image=photo2,relief=RAISED, command=mike2)
-button_change.place(x=440,y=520,height=40,width=40)
+button_change.place(x=440,y=520,height=40,width=40) 
+
 
 root.mainloop()
